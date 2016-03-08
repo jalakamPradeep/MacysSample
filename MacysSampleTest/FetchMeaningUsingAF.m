@@ -43,7 +43,7 @@ static NSString * const kcontentType = @"text/plain";
         }
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        
+         [self.delegate fetchCompleted:@[@"Please enter valid text"]];
         NSLog(@"%@",[error localizedDescription]);
     }];
     
