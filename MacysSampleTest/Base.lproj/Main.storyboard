@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Display Meanings View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="DisplayMeaningsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Acronyms :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJS-Ju-37C">
+                                <rect key="frame" x="13" y="28" width="98" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="98" id="30m-hG-Ud2"/>
+                                    <constraint firstAttribute="height" constant="21" id="bRq-38-de8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Acronyms and for its meanings " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vCp-r8-1h2">
+                                <rect key="frame" x="111" y="24" width="258" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="x7j-jA-AyJ"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meaning :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pge-aZ-rxT">
+                                <rect key="frame" x="13" y="70" width="85" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="XaX-bk-Xsv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MZY-lC-fr0">
+                                <rect key="frame" x="0.0" y="99" width="375" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="S6F-tI-fxz"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="D9X-Bd-zbG"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.81475159509999995" blue="0.64174958209999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="pge-aZ-rxT" firstAttribute="top" secondItem="ZJS-Ju-37C" secondAttribute="bottom" constant="21" id="Aaf-mO-CAQ"/>
+                            <constraint firstItem="MZY-lC-fr0" firstAttribute="top" secondItem="vCp-r8-1h2" secondAttribute="bottom" constant="45" id="HNg-k9-Lhx"/>
+                            <constraint firstItem="vCp-r8-1h2" firstAttribute="leading" secondItem="ZJS-Ju-37C" secondAttribute="trailing" id="IPO-61-EQR"/>
+                            <constraint firstItem="ZJS-Ju-37C" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-3" id="KPx-dB-WZz"/>
+                            <constraint firstItem="ZJS-Ju-37C" firstAttribute="leading" secondItem="pge-aZ-rxT" secondAttribute="leading" id="Ljl-A2-2o9"/>
+                            <constraint firstAttribute="trailing" secondItem="MZY-lC-fr0" secondAttribute="trailing" id="OEX-RK-ehT"/>
+                            <constraint firstItem="ZJS-Ju-37C" firstAttribute="centerY" secondItem="vCp-r8-1h2" secondAttribute="centerY" id="Zrn-hG-ght"/>
+                            <constraint firstItem="ZJS-Ju-37C" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="eMn-kJ-JKD"/>
+                            <constraint firstItem="MZY-lC-fr0" firstAttribute="top" secondItem="pge-aZ-rxT" secondAttribute="bottom" constant="8" symbolic="YES" id="kCR-3c-CWg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vCp-r8-1h2" secondAttribute="trailing" constant="-10" id="lCM-Zx-Ug9"/>
+                            <constraint firstItem="MZY-lC-fr0" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="m8o-z3-jUl"/>
+                            <constraint firstItem="MZY-lC-fr0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ma6-zX-vyW"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="enterAcronymsTextFeild" destination="vCp-r8-1h2" id="BQG-oy-8D5"/>
+                        <outlet property="meaningsTableView" destination="MZY-lC-fr0" id="Z0o-8f-aYn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304.5" y="367.5"/>
+        </scene>
+    </scenes>
+</document>
